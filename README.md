@@ -4,7 +4,8 @@
 - application.properties содержит параметры для кофигурации приложения: количаство подключений с одного адреса ( rate-limit-connection )
   и период в минутах ( rate-limit-period-min )
 - Перед запуском приложения в кондейнере нужно собрать jar-файл командой: `gradle build`
-- Для работы в докере сперва нужно собрать image командой(в каталоге с Dockerfile): `docker build -t ecom-test-app:0.0.1 .`
+- Для работы в докере сперва нужно собрать image командой(в каталоге с Dockerfile):
+  `docker build -t ecom-test-app:0.0.1 .`
 - После сборки - запустить контейнер: `docker run -d -p 8080:8080 --name ecom-container -t ecom-test-app:0.0.1`
 - Проверка командой `curl -i -X GET "http://localhost:8080"`
 
